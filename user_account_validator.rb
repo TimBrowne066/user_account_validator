@@ -7,6 +7,7 @@ class UserAccountValidator
     @email = hash[:email]
     @username = hash[:username]
     @name = hash[:name]
+
     if @email == nil || @email == ""
       raise NoEmailError
     elsif @username == nil || @username == ""
@@ -17,5 +18,4 @@ class UserAccountValidator
       raise "no name"
     end
   end
-
 end
